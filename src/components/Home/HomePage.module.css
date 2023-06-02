@@ -1,0 +1,19 @@
+/* In the updated styles:
+
+The .container .box selector now includes overflow: hidden; to ensure that the video does not overflow the box when it's enlarged.
+The .container .box:hover selector adds transform: scale(1.1); to enlarge the box by 10% when it's hovered over. You can adjust the scale value to control the degree of enlargement.
+The transition property with transform is added to create a smooth transition effect when the box is enlarged on hover. The 0.3s duration and ease timing function can be adjusted as desired. */
+
+.mainVideo {
+    position: relative;
+    margin: 0 auto; /* Center the video horizontally */
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    border: 20px solid rgb(0, 0, 0); /* Add a border */
+    border-top: none; /* Remove the top border */
+    border-bottom: none; /* Remove the bottom border */
+  }
+  
+  
+  

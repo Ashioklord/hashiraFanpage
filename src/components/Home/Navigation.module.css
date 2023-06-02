@@ -5,7 +5,7 @@ The .container .box:hover selector adds transform: scale(1.1); to enlarge the bo
 The transition property with transform is added to create a smooth transition effect when the box is enlarged on hover. The 0.3s duration and ease timing function can be adjusted as desired. */
 
 .container {
-  margin-top: 5%;
+  margin-top: 0%;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -16,7 +16,7 @@ The transition property with transform is added to create a smooth transition ef
   position: relative;
   width: 25%;
   height: 50vh;
-  border: 4px solid black;
+  border: 5px solid black;
   overflow: hidden;
   transition: transform 0.3s ease;
   z-index: 1; /* Add z-index to ensure the box stays on top */
@@ -42,7 +42,7 @@ The transition property with transform is added to create a smooth transition ef
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);

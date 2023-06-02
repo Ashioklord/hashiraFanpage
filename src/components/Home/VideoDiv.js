@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import classes from "./Navigation.module.css";
+import { Link } from "react-router-dom";
 
 function VideoDiv(props) {
   const videoRef = useRef(null);
@@ -24,16 +25,18 @@ function VideoDiv(props) {
   return (
     <div className={classes.box}>
       <div className={classes.label}>{props.videoLabel}</div>
-      <video
-        ref={videoRef}
-        className={videoClassName}
-        loop
-        muted
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <source src={props.videoLoc} type="video/mp4" />
-      </video>
+      <Link to={'/'+props.videoLabel}>
+        <video
+          ref={videoRef}
+          className={videoClassName}
+          loop
+          muted
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <source src={props.videoLoc} type="video/mp4" />
+        </video>
+      </Link>
     </div>
   );
 }

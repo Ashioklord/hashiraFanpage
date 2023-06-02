@@ -3,34 +3,80 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
-  background: #741188;
+  height: 7.5rem;
+  background: #5d1002;
   z-index: 1;
-  overflow: hidden;
-  
+  overflow:hidden;
+  /*remember to make overflow hidden */
 }
 
 .main-header .header-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content:center; /* Center the content horizontally */
   align-items: center;
-  padding: 0rem;
+  padding: 0;
   height: 100%;
 }
+
 
 .main-header h1 {
-  color: white;
+  text-shadow: black;
+  margin: auto;
+  /* text-decoration-line: underline;
+  text-decoration-line: overline; */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-decoration-color: rgb(186, 67, 24);
+  color: aliceblue;
+  font-size: 60px;
   align-items: center;
-  
+  margin-bottom: 0;
 }
 
-.main-header .banner-image {
-  padding-right: 4.9rem ;
-  height: 100%;
-  max-width: 1000%;
-  object-fit: auto;
-  transform: scale(3.4);
-  z-index: 0;
-  
-  
+.main-header h2 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-decoration-line: overline;
+  text-decoration-color: rgb(186, 67, 24);
+  align-items: center;
+  margin-top: 0rem;
 }
+
+.main-header h3 {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+.main-header .fanpage-left,
+.main-header .fanpage-right {
+  display: flex;
+  align-items: center;
+   /* Set the height to 50% */
+  font-size: 20px; /* Adjust the font size as needed */
+  margin-bottom: 2.7rem;
+  padding-bottom: 0%;
+}
+
+.main-header .fanpage-left {
+  justify-content: flex-start;
+}
+
+.main-header .fanpage-right {
+  justify-content: flex-end;
+}
+
+
+.main-header .banner-image {
+  height: 100%;
+  max-width: 100%;
+  z-index: 0;
+}
+  
+

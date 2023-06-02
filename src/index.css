@@ -9,7 +9,9 @@ html {
 }
 
 body {
-  margin: 0;
-  background-color: #3f3f3f;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-block-start: auto;
+  background-color: #2e1e08;
 }
 
