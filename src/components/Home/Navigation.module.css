@@ -1,0 +1,51 @@
+/* In the updated styles:
+
+The .container .box selector now includes overflow: hidden; to ensure that the video does not overflow the box when it's enlarged.
+The .container .box:hover selector adds transform: scale(1.1); to enlarge the box by 10% when it's hovered over. You can adjust the scale value to control the degree of enlargement.
+The transition property with transform is added to create a smooth transition effect when the box is enlarged on hover. The 0.3s duration and ease timing function can be adjusted as desired. */
+
+.container {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container .box {
+  position: relative;
+  width: 25%;
+  height: 50vh;
+  border: 4px solid black;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1; /* Add z-index to ensure the box stays on top */
+}
+
+.container .box:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  z-index: 2; /* Increase z-index on hover to bring the box to the front */
+}
+
+.container .box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .label {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 3; /* Add higher z-index to ensure the label is on top */
+}
+
