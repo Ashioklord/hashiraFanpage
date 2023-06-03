@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
 html {
@@ -13,5 +14,6 @@ body {
   margin-right: 10%;
   margin-block-start: auto;
   background-color: #2e1e08;
+
 }
 

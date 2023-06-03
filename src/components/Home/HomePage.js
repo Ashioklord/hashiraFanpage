@@ -3,12 +3,14 @@ import MainHeader from "./MainHeader";
 import Navigation from "./Navigation";
 import hashiraTheme from "./hashiraTheme.mp3";
 import classes from "./HomePage.module.css";
+import Modal from "../UI/Modal/Modal";
 
 function HomePage() {
   const audioRef = useRef(null);
   const videoRef = useRef(null);
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
   const [isVideoMuted, setIsVideoMuted] = useState(true);
+  const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -59,8 +61,19 @@ function HomePage() {
     }
   };
 
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <React.Fragment>
+      {showModal && (
+        <Modal
+          title="Hashira Fanpage"
+          message="Welcome to my fanpage. Have fun! Click the button or anywhere on the page to close this modal."
+          onConfirm={closeModal}
+        />
+      )}
       <MainHeader
         headerTitle="鬼滅の刃"
         bannerLoc="/images/kimetsu-no-yaiba-logo.png"
@@ -75,7 +88,6 @@ function HomePage() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       ></video>
-      
       <Navigation />
       <audio ref={audioRef} src={hashiraTheme} loop />
     </React.Fragment>
